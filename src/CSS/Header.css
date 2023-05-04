@@ -1,0 +1,281 @@
+﻿.menu {
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+/*Header*/
+.header {
+    width: 100%;
+}
+
+.logo-layer {
+    height: 100%;
+}
+
+.logo {
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+}
+
+.format-header {
+    padding: 0 4%;
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.nav-left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navigator {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-selector {
+    height: 100%;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+    .nav-selector:hover {
+        text-decoration: underline;
+    }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.content-menu {
+    display: flex;
+}
+
+.searcher {
+    display: block;
+}
+
+.search-input {
+    height: 2rem;
+    padding: 0 1rem;
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #A79095;
+}
+
+#search-result {
+    position: absolute;
+    margin-top: 1.55rem;
+    width: 20rem;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 1rem darkgrey;
+    border-radius: 10px;
+}
+
+.result {
+    padding: 0.5rem;
+    color: #000;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+    .result:hover {
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+
+.nav-btn {
+    padding: 1.5rem;
+}
+
+.popup-user {
+    display: none;
+}
+
+.appear:hover .list-product-clothes {
+    cursor: auto;
+    width: 80%;
+    border-radius: 8px;
+    top: 100%;
+    left: 10%;
+    position: absolute;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.account-user:hover .popup-user {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 70%;
+    right: 6%;
+    min-width: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.popup-user .top, .popup-user .bottom {
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .4s;
+    border-radius: 4px;
+}
+
+    .popup-user .top:hover, .popup-user .bottom:hover {
+        background-color: #f2fdeb;
+    }
+
+.title-category {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+    transition: all 0.4s;
+}
+
+    .title-category:hover {
+        color: rgb(146, 146, 235);
+    }
+
+.name-category {
+    font-size: 15px;
+    text-transform: capitalize;
+    transition: all 0.3s;
+    font-weight: 500;
+    color: rgb(54, 54, 72);
+    margin: 6px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+    .name-category:hover {
+        text-decoration: underline;
+        color: rgb(121, 121, 195);
+    }
+
+#icon-search {
+    display: none;
+}
+
+.nav-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-counter {
+    color: black;
+    position: absolute;
+    border: 1px solid #333;
+    border-radius: 2rem;
+    text-align: center;
+    top: 1rem;
+    min-width: 1rem;
+    font-size: 12px;
+}
+
+
+.list-product-clothes {
+    display: none;
+    transition: all 0.4s;
+}
+
+@media (max-width: 1024px) and (min-width: 680px) {
+    ul.navigator {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1250px) and (min-width: 1025px) {
+    ul.navigator {
+        display: none !important;
+    }
+
+    #Searcher {
+        width: 500px;
+    }
+}
+
+@media (max-width: 700px) {
+    ul.navigator {
+        display: none !important;
+    }
+
+    #Searcher, .in-menu {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 0 12px;
+    }
+
+    #icon-search, .menu {
+        display: block;
+    }
+
+    .content-menu {
+        position: absolute;
+        top: 35%;
+        right: 20%;
+    }
+
+    #Searcher.active {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 95%;
+        padding-left: 1rem;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .cart-counter {
+        top: -8px;
+    }
+
+    #search-result {
+        top: 100px;
+        left: 20%;
+        width: 400px;
+    }
+}

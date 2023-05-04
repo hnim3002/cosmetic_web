@@ -1,0 +1,181 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.hover-red:hover {
+    color: red;
+}
+
+.border-bot {
+    border-bottom: 1px solid #333;
+}
+
+/*Main Content*/
+main {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+
+.content {
+    width: 70%;
+    margin: auto;
+}
+
+.poster {
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+.content-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reverse-row {
+    flex-direction: row-reverse;
+}
+
+.content-title {
+    width: 30%;
+    min-width: 200px;
+    text-align: center;
+}
+
+.content-tag {
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.image {
+    border-radius: 8px;
+    width: 80%;
+    height: auto;
+}
+
+.content-list {
+    min-width: 70%;
+}
+
+.product-row {
+    display: flex;
+}
+
+.product {
+    border: none;
+    width: 100%;
+    height: auto;
+    margin: 3%;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.4s;
+}
+
+    .product:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 10px;
+    }
+
+.product-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.product-info {
+    display: flex;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.product-left {
+    width: 80%;
+    text-align: center;
+    color: black;
+}
+
+.product-name {
+    font-size: 1rem;
+}
+
+.product-right {
+    width: 20%;
+    text-align: center;
+}
+
+.add-to-cart {
+    margin-top: 0.5rem;
+    width: 60%;
+}
+
+.product-poster {
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+}
+
+.f-poster {
+    width: 100%;
+    height: auto;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, .06);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 700px) {
+
+    .product-right {
+        display: none;
+    }
+
+    .product-row {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .product-info {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,268 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B484C11D-A911-4A2B-89AC-8DB16B3F69B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTL</RootNamespace>
+    <AssemblyName>BTL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44312</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="src\AddByDetails.aspx" />
+    <Content Include="src\AddToCart.aspx" />
+    <Content Include="src\Cart.aspx" />
+    <Content Include="src\CSS\Cart.css" />
+    <Content Include="src\CSS\Details.css" />
+    <Content Include="src\CSS\Footer.css" />
+    <Content Include="src\CSS\Header.css" />
+    <Content Include="src\CSS\Home.css" />
+    <Content Include="src\CSS\SignIn.css" />
+    <Content Include="src\CSS\SignUp.css" />
+    <Content Include="src\Home.aspx" />
+    <Content Include="src\Img\background_image.jpg" />
+    <Content Include="src\Img\bg_poster.png" />
+    <Content Include="src\Img\cosmetics\c-poster.png" />
+    <Content Include="src\Img\cosmetics\forlady.jpg" />
+    <Content Include="src\Img\cosmetics\lipstick-1.jpg" />
+    <Content Include="src\Img\cosmetics\lipstick-2.jpg" />
+    <Content Include="src\Img\cosmetics\lipstick-3.jpg" />
+    <Content Include="src\Img\cosmetics\perfume-1.jpg" />
+    <Content Include="src\Img\cosmetics\perfume-2.jpg" />
+    <Content Include="src\Img\cosmetics\perfume-3.jpg" />
+    <Content Include="src\Img\icon\facebook.png" />
+    <Content Include="src\Img\icon\instagram.png" />
+    <Content Include="src\Img\icon\logo.png" />
+    <Content Include="src\Img\icon\menu-hamburger.jfif" />
+    <Content Include="src\Img\icon\search.png" />
+    <Content Include="src\Img\icon\shopping-cart.png" />
+    <Content Include="src\Img\icon\tik-tok.png" />
+    <Content Include="src\Img\icon\user.png" />
+    <Content Include="src\Img\icon\youtube.png" />
+    <Content Include="src\Img\men\formen.jpg" />
+    <Content Include="src\Img\men\m-poster.png" />
+    <Content Include="src\Img\men\men-clothes.jpg" />
+    <Content Include="src\Img\men\men-shirt-1.jpg" />
+    <Content Include="src\Img\men\men-shirt-2.jpg" />
+    <Content Include="src\Img\men\men-shirt-3.jpg" />
+    <Content Include="src\Img\men\men-trousers-1.jpg" />
+    <Content Include="src\Img\men\men-trousers-2.jpg" />
+    <Content Include="src\Img\men\men-trousers-3.jpg" />
+    <Content Include="src\Img\women\forwomen.jpg" />
+    <Content Include="src\Img\women\w-poster.png" />
+    <Content Include="src\Img\women\women-pants-1.jpg" />
+    <Content Include="src\Img\women\women-pants-2.jpg" />
+    <Content Include="src\Img\women\women-pants-3.jpg" />
+    <Content Include="src\Img\women\women-shirt-1.jpg" />
+    <Content Include="src\Img\women\women-shirt-2.jpg" />
+    <Content Include="src\Img\women\women-shirt-3.jpg" />
+    <Content Include="src\JS\BurgerMenu.js" />
+    <Content Include="src\JS\Details.js" />
+    <Content Include="src\JS\Home.js" />
+    <Content Include="src\JS\SignIn.js" />
+    <Content Include="src\JS\SignUp.js" />
+    <Content Include="src\ProductDecrease.aspx" />
+    <Content Include="src\ProductDeletion.aspx" />
+    <Content Include="src\ProductIncrease.aspx" />
+    <Content Include="src\SignIn.aspx" />
+    <Content Include="src\SignOut.aspx" />
+    <Content Include="src\SignUp.aspx" />
+    <Content Include="src\SingleProduct.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\AddByDetails.aspx.cs">
+      <DependentUpon>AddByDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\AddByDetails.aspx.designer.cs">
+      <DependentUpon>AddByDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Product.cs" />
+    <Compile Include="src\ProductDecrease.aspx.cs">
+      <DependentUpon>ProductDecrease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\ProductDecrease.aspx.designer.cs">
+      <DependentUpon>ProductDecrease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\ProductDeletion.aspx.cs">
+      <DependentUpon>ProductDeletion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\ProductDeletion.aspx.designer.cs">
+      <DependentUpon>ProductDeletion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\ProductIncrease.aspx.cs">
+      <DependentUpon>ProductIncrease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\ProductIncrease.aspx.designer.cs">
+      <DependentUpon>ProductIncrease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\SingleProduct.aspx.cs">
+      <DependentUpon>SingleProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="src\SingleProduct.aspx.designer.cs">
+      <DependentUpon>SingleProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61877</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44312/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

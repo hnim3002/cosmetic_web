@@ -1,0 +1,113 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../Img/background_image.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.login-section {
+    height: 500px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(7px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .login-form .slogan-login {
+        text-align: center;
+        font-size: 36px;
+        color: white;
+    }
+
+    .login-form .input-form {
+        position: relative;
+        margin: 20px 0;
+        width: 310px;
+        border-bottom: 2px solid #fff;
+    }
+
+.input-form input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 35px 0 5px;
+    background: transparent;
+    font-size: 16px;
+}
+
+.input-form label {
+    position: absolute;
+    top: -3px;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+#errorUsername, #errorPassword {
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+    min-height: 16px;
+}
+
+.btn-login {
+    margin: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: #0a90ff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 0;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+    .btn-login:hover {
+        opacity: 0.7;
+    }
+
+.action-account {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .action-account a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+        .action-account a:hover {
+            text-decoration: underline;
+            color: #8fcafa;
+        }
+
+@media (max-width: 680px) {
+    .login-section {
+        width: 90vw !important;
+    }
+}

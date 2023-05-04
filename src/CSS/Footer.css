@@ -1,0 +1,61 @@
+﻿/*Footer*/
+.footer {
+    border-top: 1px solid #e6e5e5;
+    margin-bottom: 2rem;
+}
+
+.footer-top {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.font-larger {
+    cursor: auto;
+    font-size: larger;
+}
+
+.footer-body {
+    margin: 1rem 0;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.social-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+.footer-bot {
+    width: 70%;
+    margin: auto;
+}
+
+.fbot-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fbot-head-right {
+    display: flex;
+}
+
+.blur-text {
+    font-weight: 400;
+    color: #7d7d7d;
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+.highlight {
+    margin-left: 1rem;
+    cursor: pointer;
+}
