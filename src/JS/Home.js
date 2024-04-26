@@ -1,97 +1,64 @@
-﻿const productList = [
+﻿
+
+const productList = [
     {
         id: 1,
-        name: "Women Shirt",
+        name: "Product 1",
         price: 100000
     },
     {
         id: 2,
-        name: "Women Shirt",
+        name: "Product 2",
         price: 200000
     }, {
         id: 3,
-        name: "Women Shirt",
+        name: "Product 3",
         price: 300000
     },
     {
         id: 4,
-        name: "Women Trouser",
+        name: "Product 4",
         price: 100000
     },
     {
         id: 5,
-        name: "Women Trouser",
+        name: "Product 5",
         price: 200000
     },
     {
         id: 6,
-        name: "Women Skirt",
+        name: "Product 6",
         price: 300000
     },
     {
         id: 7,
-        name: "Men Shirt",
+        name: "Product 7",
         price: 100000
     },
     {
         id: 8,
-        name: "Men Shirt",
+        name: "Product 8",
         price: 200000
     },
     {
         id: 9,
-        name: "Men Shirt",
+        name: "Product 9",
         price: 300000
     },
     {
         id: 10,
-        name: "Men Pants",
+        name: "Product 10",
         price: 100000
-    },
-    {
-        id: 11,
-        name: "Men Pants",
-        price: 200000
-    },
-    {
-        id: 12,
-        name: "Men Pants",
-        price: 300000
-    },
-    {
-        id: 13,
-        name: "Lipstick",
-        price: 100000
-    },
-    {
-        id: 14,
-        name: "Lipstick",
-        price: 200000
-    },
-    {
-        id: 15,
-        name: "Lipstick",
-        price: 300000
-    },
-    {
-        id: 16,
-        name: "Perfume",
-        price: 100000
-    },
-    {
-        id: 17,
-        name: "Perfume",
-        price: 200000
-    },
-    {
-        id: 18,
-        name: "Perfume",
-        price: 300000
     }
-];
+]; 
+
+var listOfproduc = [];
+
+var cartCount = document.getElementById("CartCounter");
 
 const searchValue = document.getElementById("Searcher");
 const searchResult = document.getElementById("search-result");
+
 
 searchValue.addEventListener("input", e => {
     const value = e.target.value.toLowerCase()
@@ -105,3 +72,21 @@ searchValue.addEventListener("input", e => {
         searchResult.innerHTML = "";
     }
 })
+
+
+
+function addToCart(id, quantity) {
+    var product = { "id": id, "quantity": quantity};
+    listOfproduc.push(product);
+    itemCount = parseInt(cartCount.textContent) + 1
+    cartCount.innerHTML = itemCount
+}
+
+function cartOnClick() {
+    var jsonData = JSON.stringify(listOfproduc);
+    listOfproduc = [];
+    var url = "Cart.aspx?dataList=" + encodeURIComponent(jsonData);
+    window.location.href = url;
+
+    
+}

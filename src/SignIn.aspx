@@ -14,17 +14,21 @@
             <div class="login-form">
                 <h2 class="slogan-login">Đăng nhập</h2>
                 <div class="input-form">
-                    <input spellcheck="false" id="username" type="text"  name="username"/>
+                    <input spellcheck="false" runat="server" id="username" type="text"  name="username"/>
                     <label for="username">Tên đăng nhập</label>
                 </div>
                 <p id="errorUsername" runat="server"></p>
+              
                 <div class="input-form">
-                    <input id="password" type="password" name="password"/>
+                    <input id="password" runat="server" type="password" name="password"/>
                     <label for="password">Mật khẩu</label>
-                </div>
+                </div>              
                 <p id="errorPassword" runat="server"></p>
 
-                <input class="btn-login" type="submit" value="Đăng nhập" />
+                <%--<label for="checkbox">Remember password</label>
+                <input type="checkbox" runat="server" id="checkbox" name="checkbox"/>--%>
+
+                <input class="btn-login"  type="submit"  value="Đăng nhập" />
 
                 <div class="action-account">
                     <a href="#">Quên mật khẩu?</a>

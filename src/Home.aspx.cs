@@ -32,44 +32,26 @@ namespace BTL.src
 
             foreach (Product p in ProductList)
             {
-                if(p.Id > 0 && p.Id <= 3)
+                if(p.Id > 0 && p.Id <= 4)
                 {
                     womenShirts.Add(p);
                 }
-                if (p.Id > 3 && p.Id <= 6)
-                {
-                    womenTrousers.Add(p);
-                }
-                if (p.Id > 6 && p.Id <= 9)
+ 
+                if (p.Id > 4 && p.Id <= 10)
                 {
                     menShirts.Add(p);
                 }
-                if (p.Id > 9 && p.Id <= 12)
-                {
-                    menTrousers.Add(p);
-                }
-                if (p.Id > 12 && p.Id <= 15)
-                {
-                    lipsticks.Add(p);
-                }
-                if (p.Id > 15 && p.Id <= 18)
-                {
-                    perfumes.Add(p);
-                }
+                
             }
 
             WomenShirts.DataSource = womenShirts;
             WomenShirts.DataBind();
-            WomenTrousers.DataSource = womenTrousers;
-            WomenTrousers.DataBind();
+            
             MenShirts.DataSource = menShirts;
             MenShirts.DataBind();
-            MenTrousers.DataSource = menTrousers;
-            MenTrousers.DataBind();
-            Lipsticks.DataSource = lipsticks;
-            Lipsticks.DataBind();
-            Perfumes.DataSource = perfumes;
-            Perfumes.DataBind();
+            
+          
+            
 
             if (user.Username == null)
             {
@@ -77,9 +59,13 @@ namespace BTL.src
             }
             else 
             {
-                int countProduct = Users[index].userCart.Count;
-
-                CartCounter.InnerHtml = $"{countProduct}";
+                int countProduct = 0;
+                foreach(var item in Users[index].userCart)
+                {
+                    countProduct = countProduct + item.Quantity;
+                }
+                
+                CartCounter.InnerText = $"{countProduct}";
             }
             
         }

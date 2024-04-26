@@ -17,36 +17,30 @@ namespace BTL
             Users.Add(new User("QuangAnh", "ngquanganh11a1@gmail.com", "181003"));
             Users.Add(new User("Trang", "trang@gmail.com", "1"));
             Users.Add(new User("Nam", "nam@gmail.com", "1"));
+            Users.Add(new User("Minh", "a@gmail.com", "1"));
 
             Application["ProductList"] = new List<Product>();
             List<Product> ProductList = (List<Product>)Application["ProductList"];
             Application["ProductCart"] = new List<Product>();
             List<Product> ProductCart = (List<Product>)Application["ProductCart"];
 
-            ProductList.Add(new Product(1,"Women Shirt", "This is a shirt for women","./Img/women/women-shirt-1.jpg", 100000,1));
-            ProductList.Add(new Product(2, "Women Shirt", "This is a shirt for women", "./Img/women/women-shirt-2.jpg", 200000, 1));
-            ProductList.Add(new Product(3, "Women Shirt", "This is a shirt for women", "./Img/women/women-shirt-3.jpg", 300000, 1));
-            ProductList.Add(new Product(4, "Women Trouser", "This is a trouser for women", "./Img/women/women-pants-1.jpg", 100000, 1));
-            ProductList.Add(new Product(5, "Women Trouser", "This is a trouser for women", "./Img/women/women-pants-2.jpg", 200000, 1));
-            ProductList.Add(new Product(6, "Women Skirt", "This is a skirt for women", "./Img/women/women-pants-3.jpg", 300000, 1));
+            ProductList.Add(new Product(1,"Product 1", "This is a Product 1 for women", "./Img/product/sanpham1.jpg", 100000,1));
+            ProductList.Add(new Product(2, "Product 2", "This is a Product 2 for women", "./Img/product/sanpham2.jpg", 200000, 1));
+            ProductList.Add(new Product(3, "Product 3", "This is a Product 3 for women", "./Img/product/sanpham3.jpg", 300000, 1));
+            ProductList.Add(new Product(4, "Product 4", "This is a Product 4 for women", "./Img/product/sanpham4.jpg", 100000, 1));
+            ProductList.Add(new Product(5, "Product 5", "This is a Product 5 for women", "./Img/product/sanpham5.jpg", 200000, 1));
+            ProductList.Add(new Product(6, "Product 6", "This is a Product 6 for women", "./Img/product/sanpham6.jpg", 300000, 1));
 
-            ProductList.Add(new Product(7, "Men Shirt", "This is a shirt for men", "./Img/men/men-shirt-1.jpg", 100000, 1));
-            ProductList.Add(new Product(8, "Men Shirt", "This is a shirt for men", "./Img/men/men-shirt-2.jpg", 200000, 1));
-            ProductList.Add(new Product(9, "Men Shirt", "This is a shirt for men", "./Img/men/men-shirt-3.jpg", 300000, 1));
-            ProductList.Add(new Product(10, "Men Pants", "This is a trouser for men", "./Img/men/men-trousers-1.jpg", 100000, 1));
-            ProductList.Add(new Product(11, "Men Pants", "This is a trouser for men", "./Img/men/men-trousers-2.jpg", 200000, 1));
-            ProductList.Add(new Product(12, "Men Pants", "This is a trouser for men", "./Img/men/men-trousers-3.jpg", 300000, 1));
-
-            ProductList.Add(new Product(13, "Lipstick", "This is a lipstick", "./Img/cosmetics/lipstick-1.jpg", 100000, 1));
-            ProductList.Add(new Product(14, "Lipstick", "This is a lipstick", "./Img/cosmetics/lipstick-2.jpg", 200000, 1));
-            ProductList.Add(new Product(15, "Lipstick", "This is a lipstick", "./Img/cosmetics/lipstick-3.jpg", 300000, 1));
-            ProductList.Add(new Product(16, "Perfume", "This is a perfume", "./Img/cosmetics/perfume-1.jpg", 100000, 1));
-            ProductList.Add(new Product(17, "Perfume", "This is a perfume", "./Img/cosmetics/perfume-2.jpg", 200000, 1));
-            ProductList.Add(new Product(18, "Perfume", "This is a perfume", "./Img/cosmetics/perfume-3.jpg", 300000, 1));
+            ProductList.Add(new Product(7, "Product 7", "This is a Product 7 for men", "./Img/product/sanpham7.jpg", 100000, 1));
+            ProductList.Add(new Product(8, "Product 8", "This is a Product 8 for men", "./Img/product/sanpham8.jpg", 200000, 1));
+            ProductList.Add(new Product(9, "Product 9", "This is a Product 9 for men", "./Img/product/sanpham9.jpg", 300000, 1));
+            ProductList.Add(new Product(10, "Product 10", "This is a Product 10 for men", "./Img/product/sanpham10.jpg", 100000, 1));
+           
         }
         protected void Session_Start(object sender, EventArgs e)
         {
             Session["User"] = new User();
+           
         }
     }
 }

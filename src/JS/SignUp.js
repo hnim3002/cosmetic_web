@@ -6,7 +6,7 @@ var errorUsername = document.getElementById("errorUsername");
 var errorEmail = document.getElementById("errorEmail");
 var errorPassword = document.getElementById("errorPassword");
 var errorConfirmPassword = document.getElementById("errorConfirmPassword");
-
+''
 function validation() {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();

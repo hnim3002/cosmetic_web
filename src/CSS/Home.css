@@ -7,7 +7,8 @@
 
 html {
     font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    
 }
 
 a {
@@ -25,13 +26,14 @@ a {
 
 /*Main Content*/
 main {
-    margin-top: 7rem;
+    margin-top: 75px;
     margin-bottom: 5rem;
 }
 
 .content {
-    width: 70%;
+    width: 100%;
     margin: auto;
+
 }
 
 .poster {
@@ -40,7 +42,6 @@ main {
 
 .container {
     width: 100%;
-    text-align: center;
 }
 
 .poster-img {
@@ -48,13 +49,20 @@ main {
     height: auto;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
 }
 
 .content-top {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px 15px 88px 15px;
+}
+
+.content-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 88px 15px 0px 15px;
 }
 
 .reverse-row {
@@ -62,15 +70,28 @@ main {
 }
 
 .content-title {
-    width: 30%;
     min-width: 200px;
     text-align: center;
 }
 
 .content-tag {
-    text-decoration: underline;
     cursor: pointer;
     margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+
+}
+
+
+.sub-content-tag {
+    font-size: 1.125rem !important;
+    max-width: 75% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom:  3.5rem ;
+    color: #7e7e7e;
+
 }
 
 .image {
@@ -84,14 +105,19 @@ main {
 }
 
 .product-row {
+    flex-wrap: wrap;
     display: flex;
+}
+
+.product-item {
+    width: 25%; 
+    padding: 1%;
 }
 
 .product {
     border: none;
     width: 100%;
     height: auto;
-    margin: 3%;
     border: none;
     text-decoration: none;
     border-radius: 8px;
@@ -133,21 +159,197 @@ main {
     text-align: center;
 }
 
+.banner-img {
+    width: 50%;
+    position: relative;
+    padding: 15px, 0;
+    margin: 0 15px;
+    height: 420px;
+    overflow: hidden; 
+}
+
+
+.zoom-img {
+    width: 100%; /* Ensure image fills its container */
+    height: 100%; /* Ensure image fills its container */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.banner-img:hover .zoom-img {
+    transform: scale(1.2); /* Zoom effect when hovering */
+}
+
+.banner-section {
+    width: 100%;
+    display: flex;
+
+}
+
+.banner-name {
+    font-size: .9375rem !important;
+    margin-bottom: .75rem !important;
+    font-weight: 600 !important;
+    letter-spacing: .1em !important;
+    color: #7e7e7e;
+}
+
+.banner-header {
+    max-width: 60% !important;
+    line-height: 45px !important;
+    font-size: 2.125rem !important;
+}
+
+.banner-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 11px 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #ffffff;
+    width: 130px;
+    color: black;
+    box-shadow: 0 0.125rem 0.25rem rgba(126, 126, 126, 0.075) !important;
+}
+
+    .banner-btn:hover {
+        background-color: black;
+        color: #ffffff;
+    }
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem !important;
+}
+
+.sub-banner-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 55px 0;
+}
+
+.sub-banner-content {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.sub-banner-content {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.sub-banner-img {
+    margin: 30px 0;
+}
+
+.sub-banner-header {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    letter-spacing: 0.8px;
+    
+}
+
+.sub-banner-text {
+    color: #7e7e7e;
+    font-size: 1.25rem;
+}
+
 .add-to-cart {
     margin-top: 0.5rem;
     width: 60%;
 }
 
+.content-list-column {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-list-banner {
+    position: relative;
+    width: 37%;
+    margin: 1%;
+    overflow: hidden;
+}
+
+    .content-list-banner:hover .zoom-img {
+        transform: scale(1.2); /* Zoom effect when hovering */
+    }
+
+.product-column {
+
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item-column {
+    width: 33.33333%;
+    padding: 1%;
+}
+
+.banner-content-column {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 3rem;
+}
+
+.banner-name-column {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    margin-top: .75rem;
+    color: white;
+}
+
+
+
+.banner-header-column {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 0
+}
+
 .product-poster {
+    overflow: hidden;
     border-radius: 10px;
     border: 1px solid #e8e8e8;
     width: 100%;
+    margin-bottom: 40px;
 }
+
+    .product-poster img {
+        transition: transform 0.3s ease; /* Add smooth transition effect */
+    }
+
+    .product-poster:hover img {
+        transform: scale(1.2); /* Zoom effect when hovering */
+    }
+
+
+
+
 
 .f-poster {
     width: 100%;
     height: auto;
 }
+
+
 
 html *::-webkit-scrollbar {
     border-radius: 0;
@@ -164,18 +366,69 @@ html *::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 768px) {
+
+    .content {
+        width: auto;
+        margin: 0 50px;
+    }
 
     .product-right {
         display: none;
     }
 
-    .product-row {
-        width: 100%;
-        flex-wrap: wrap;
+    .product-item {
+        width: 50%;
+        padding: 3%;
     }
 
     .product-info {
         justify-content: center;
     }
+
+    .banner-section {
+        flex-direction: column;
+    }
+
+    .banner-img {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .sub-banner-section {      
+        flex-direction: column;          
+        align-items: center;        
+    }
+
+    .sub-banner-content {
+        width: 100%;
+    }
+
+    .content-list-column {        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-list-banner {
+        width: 100%;
+    }
+
+    .product-column {
+        width: 100%;
+    }
+
+    .product-item-column {
+        width: 50%;
+        padding: 3%;
+    }
+
+    
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .sub-banner-content {      
+        width: 50%;
+    }
+}
+
+

@@ -11,11 +11,39 @@ namespace BTL.src
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (IsPostBack)
             {
-                List<User> Users = (List<User>)Application["Users"];
                 string siName = Request.Form["username"];
                 string siPassword = Request.Form["password"];
+
+         
+
+                // Your login logic here
+
+                //if (checkbox.Checked)
+                //{
+                //    // Create a persistent cookie
+                //    HttpCookie cookie = new HttpCookie("LoginCookie");
+
+
+                //    string encodedUsername = HttpUtility.UrlEncode(siName);
+                //    string encodedPassword = HttpUtility.UrlEncode(siName);
+
+                //    cookie["Username"] = encodedUsername;
+                //    cookie["Password"] = encodedPassword;
+                //    cookie.Expires = DateTime.Now.AddDays(30);
+                //    Response.Cookies.Add(cookie);                 
+                //}
+                //else
+                //{
+                //    HttpCookie myCookie = new HttpCookie("LoginCookie");
+                //    myCookie.Expires = DateTime.MinValue;
+                //    Response.Cookies.Add(myCookie);
+                //}
+
+                List<User> Users = (List<User>)Application["Users"];
+                
                 bool accExist = false;
                 errorUsername.InnerText = "";
                 errorPassword.InnerText = "";
@@ -44,6 +72,9 @@ namespace BTL.src
                     errorUsername.InnerText = "Tài khoản ko tồn tại";
                 }
             }
+
+           
+
         }
     }
 }

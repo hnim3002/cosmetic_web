@@ -24,6 +24,7 @@
     position: fixed;
     top: 0;
     background-color: #fff;
+    z-index: 10;
 }
 
 .format-header {
@@ -38,6 +39,7 @@
 }
 
 .nav-left {
+    
     display: flex;
     height: 100%;
     align-items: center;
@@ -50,6 +52,8 @@
     display: flex;
     align-items: center;
 }
+
+
 
 .nav-selector {
     height: 100%;
@@ -67,7 +71,9 @@
 
 .nav-right {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    width: 15rem;
 }
 
 .nav-search {
@@ -86,11 +92,15 @@
 .search-input {
     height: 2rem;
     padding: 0 1rem;
-    width: 20rem;
+    width: 15rem;
     border-radius: 10px;
     box-shadow: none;
     outline: none;
     border: 1px solid #A79095;
+}
+
+.product-poster {
+    margin-bottom: 40px
 }
 
 #search-result {
@@ -220,31 +230,54 @@
     transition: all 0.4s;
 }
 
-@media (max-width: 1024px) and (min-width: 680px) {
-    ul.navigator {
-        display: none !important;
-    }
+.sub-navigator {
+ 
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 1250px) and (min-width: 1025px) {
+.disable {
+    display: none;
+}
+
+
+.sub-nav-selector {
+    text-align: center;
+    line-height: 3;
+}
+
+.sub-list-product-clothes {
+    display: none;
+}
+
+.sub-clothes:hover .sub-list-product-clothes {
+    display: block;
+}
+
+@media (max-width: 1080px) and (min-width: 680px) {
     ul.navigator {
-        display: none !important;
+        display: none;
     }
 
-    #Searcher {
-        width: 500px;
+    #icon-search, .menu {
+        display: block;
     }
+
 }
+
+/*@media (max-width: 1250px) and (min-width: 1025px) {
+    ul.navigator {*/
+        /*display: none !important;*/
+    /*}
+}*/
 
 @media (max-width: 700px) {
     ul.navigator {
         display: none !important;
     }
 
-    #Searcher, .in-menu {
+    /*#Searcher, .in-menu {
         display: none;
-    }
-
+    }*/
     .nav-btn {
         padding: 0 12px;
     }
@@ -253,7 +286,7 @@
         display: block;
     }
 
-    .content-menu {
+    /*.content-menu {
         position: absolute;
         top: 35%;
         right: 20%;
@@ -277,5 +310,5 @@
         top: 100px;
         left: 20%;
         width: 400px;
-    }
+    }*/
 }
